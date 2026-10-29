@@ -1,0 +1,434 @@
+/* ==========================================================================
+   WANDERLUST TRAVELS - PREMIUM LUXURY THEME
+   Palette: Warm Ivory/Cream (#FAF8F5), Deep Charcoal/Navy (#141A1F), Muted Gold (#C5A059)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --bg-warm-ivory: #FAF8F5;
+    --bg-cream-card: #FFFFFF;
+    --bg-subtle-beige: #F4EFE6;
+    --bg-dark-charcoal: #141A1F;
+    --bg-navy-card: #1D262C;
+    
+    --text-main: #1A2228;
+    --text-muted: #6C757D;
+    --text-light: #F4EFE6;
+
+    --gold-primary: #C5A059;
+    --gold-hover: #B89047;
+    --gold-light: #F7F1E5;
+    --gold-border: rgba(197, 160, 89, 0.28);
+
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    
+    --shadow-soft: 0 10px 30px rgba(20, 26, 31, 0.05);
+    --shadow-hover: 0 20px 40px rgba(20, 26, 31, 0.12);
+    --transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+body {
+    background-color: var(--bg-warm-ivory);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    font-size: 0.98rem;
+    line-height: 1.65;
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: var(--font-heading);
+    letter-spacing: -0.01em;
+    font-weight: 600;
+}
+
+.text-gold {
+    color: var(--gold-primary) !important;
+}
+
+.bg-gold {
+    background-color: var(--gold-primary) !important;
+    color: #fff;
+}
+
+.bg-warm-ivory {
+    background-color: var(--bg-warm-ivory) !important;
+}
+
+.bg-cream-card {
+    background-color: var(--bg-cream-card) !important;
+}
+
+.bg-dark-charcoal {
+    background-color: var(--bg-dark-charcoal) !important;
+    color: var(--text-light);
+}
+
+.border-gold {
+    border-color: var(--gold-border) !important;
+}
+
+/* Custom Navigation */
+.navbar-wanderlust {
+    background: rgba(20, 26, 31, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+    padding: 0.9rem 0;
+    transition: var(--transition);
+}
+
+.navbar-wanderlust .navbar-brand {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+}
+
+.navbar-wanderlust .navbar-brand span {
+    color: var(--gold-primary);
+}
+
+.navbar-wanderlust .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    font-size: 0.93rem;
+    padding: 0.5rem 0.9rem;
+    letter-spacing: 0.3px;
+    transition: var(--transition);
+}
+
+.navbar-wanderlust .nav-link:hover,
+.navbar-wanderlust .nav-link.active {
+    color: var(--gold-primary);
+}
+
+.brand-tagline-sub {
+    font-size: 0.7rem;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold-primary);
+    display: block;
+    margin-top: -4px;
+}
+
+/* Buttons */
+.btn-gold {
+    background-color: var(--gold-primary);
+    color: #FFFFFF;
+    border: 1px solid var(--gold-primary);
+    font-weight: 600;
+    padding: 0.65rem 1.6rem;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+}
+
+.btn-gold:hover {
+    background-color: var(--gold-hover);
+    border-color: var(--gold-hover);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(197, 160, 89, 0.3);
+}
+
+.btn-outline-gold {
+    background-color: transparent;
+    color: var(--gold-primary);
+    border: 1px solid var(--gold-primary);
+    font-weight: 600;
+    padding: 0.65rem 1.6rem;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.btn-outline-gold:hover {
+    background-color: var(--gold-primary);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+.btn-charcoal {
+    background-color: var(--bg-dark-charcoal);
+    color: #FFFFFF;
+    border: 1px solid var(--bg-dark-charcoal);
+    font-weight: 600;
+    padding: 0.65rem 1.6rem;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.btn-charcoal:hover {
+    background-color: #0B1319;
+    color: var(--gold-primary);
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    min-height: 88vh;
+    background: linear-gradient(180deg, rgba(20, 26, 31, 0.65) 0%, rgba(20, 26, 31, 0.85) 100%), url('https://images.unsplash.com/photo-1488085061387-422e29b40080?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    border-bottom: 2px solid var(--gold-primary);
+}
+
+.hero-tagline {
+    font-size: 0.95rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold-primary);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.hero-title {
+    font-size: 3.8rem;
+    line-height: 1.15;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.88);
+    max-width: 650px;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+}
+
+/* Search Bar Component */
+.hero-search-box {
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--gold-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    color: var(--text-main);
+}
+
+/* Luxury Cards */
+.travel-card {
+    background: #FFFFFF;
+    border: 1px solid var(--gold-border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.travel-card:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--gold-primary);
+}
+
+.travel-card-img-wrap {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+
+.travel-card-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.travel-card:hover .travel-card-img-wrap img {
+    transform: scale(1.08);
+}
+
+.card-badge-gold {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(20, 26, 31, 0.85);
+    color: var(--gold-primary);
+    border: 1px solid var(--gold-primary);
+    padding: 0.25rem 0.75rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+}
+
+.card-wishlist-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    color: #1A2228;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.card-wishlist-btn:hover,
+.card-wishlist-btn.active {
+    background: var(--gold-primary);
+    color: #FFFFFF;
+}
+
+.travel-card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.travel-card-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.travel-card-price {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--gold-primary);
+}
+
+/* Feature Icon Box */
+.icon-box-luxury {
+    background: #FFFFFF;
+    border: 1px solid var(--gold-border);
+    border-radius: 8px;
+    padding: 2.2rem 1.8rem;
+    transition: var(--transition);
+    height: 100%;
+}
+
+.icon-box-luxury:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold-primary);
+    box-shadow: var(--shadow-soft);
+}
+
+.icon-box-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--gold-light);
+    color: var(--gold-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--gold-border);
+}
+
+/* Section Titles */
+.section-subtitle {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-primary);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.section-title {
+    font-size: 2.7rem;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+}
+
+/* Form Controls */
+.form-control-luxury {
+    background-color: #FFFFFF;
+    border: 1px solid #DFD7C4;
+    border-radius: 4px;
+    padding: 0.7rem 1rem;
+    color: var(--text-main);
+    transition: var(--transition);
+}
+
+.form-control-luxury:focus {
+    background-color: #FFFFFF;
+    border-color: var(--gold-primary);
+    box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
+    outline: none;
+}
+
+/* Footer */
+.footer-wanderlust {
+    background-color: var(--bg-dark-charcoal);
+    color: var(--text-light);
+    border-top: 3px solid var(--gold-primary);
+    padding-top: 4.5rem;
+    padding-bottom: 2rem;
+}
+
+.footer-brand {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: #FFFFFF;
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: var(--transition);
+    display: block;
+    margin-bottom: 0.6rem;
+}
+
+.footer-link:hover {
+    color: var(--gold-primary);
+    transform: translateX(4px);
+}
+
+/* Admin Dashboard Styling */
+.admin-sidebar {
+    background-color: var(--bg-dark-charcoal);
+    min-height: 100vh;
+    border-right: 1px solid var(--gold-border);
+}
+
+.admin-nav-link {
+    color: rgba(255, 255, 255, 0.75);
+    padding: 0.8rem 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    transition: var(--transition);
+    border-radius: 4px;
+    margin-bottom: 0.3rem;
+}
+
+.admin-nav-link:hover,
+.admin-nav-link.active {
+    background: var(--gold-primary);
+    color: #FFFFFF;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .hero-title {
+        font-size: 2.6rem;
+    }
+    .section-title {
+        font-size: 2.1rem;
+    }
+}
